@@ -1,0 +1,14 @@
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\bin\Debug\ProjectUI.exe.config
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\bin\Debug\ProjectUI.exe
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\bin\Debug\ProjectUI.pdb
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csprojAssemblyReference.cache
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Form1.resources
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Properties.Resources.resources
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csproj.GenerateResource.cache
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csproj.CoreCompileInputs.cache
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.exe
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.pdb
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Signuppage.resources
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Expense.resources
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Income.resources
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.index.resources
