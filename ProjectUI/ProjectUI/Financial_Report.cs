@@ -10,35 +10,40 @@ using System.Windows.Forms;
 
 namespace ProjectUI
 {
-    public partial class Income : Form
+    public partial class Financial_Report : Form
     {
-        public Income()
+        public Financial_Report()
         {
             InitializeComponent();
         }
 
-        private void Income_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            panelLeft.Top = buttonHome.Top;
             this.Hide();
+            panelLeft.Visible = true;
             index f = new index();
             f.Show();
         }
 
+        private void buttonIncome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Income f = new Income();
+            f.Show();
+            panelLeft.Visible = true;
+            panelLeft.Top = buttonIncome.Top;
+        }
+
         private void buttonExpense_Click(object sender, EventArgs e)
         {
-            panelLeft.Top = buttonExpense.Top;
             this.Hide();
             Expense f = new Expense();
             f.Show();
+            panelLeft.Visible = true;
+            panelLeft.Top = buttonExpense.Top;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form1 f = new Form1();

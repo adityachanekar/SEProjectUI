@@ -12,3 +12,38 @@ D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Signuppage.resources
 D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Expense.resources
 D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Income.resources
 D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.index.resources
+D:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Financial_Report.resources
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\bin\Debug\ProjectUI.exe.config
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\bin\Debug\ProjectUI.exe
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\bin\Debug\ProjectUI.pdb
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csprojAssemblyReference.cache
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Expense.resources
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Financial_Report.resources
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Form1.resources
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Income.resources
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.index.resources
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Properties.Resources.resources
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Signuppage.resources
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csproj.GenerateResource.cache
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csproj.CoreCompileInputs.cache
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.exe
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.pdb
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\bin\Debug\Oracle.DataAccess.dll
+F:\DIRECTORY 1\SE\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csproj.CopyComplete
+D:\ProjectUI\ProjectUI\bin\Debug\ProjectUI.exe.config
+D:\ProjectUI\ProjectUI\bin\Debug\ProjectUI.exe
+D:\ProjectUI\ProjectUI\bin\Debug\ProjectUI.pdb
+D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csprojAssemblyReference.cache
+D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Expense.resources
+D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Financial_Report.resources
+D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Form1.resources
+D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Income.resources
+D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.index.resources
+D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Properties.Resources.resources
+D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Signuppage.resources
+D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csproj.GenerateResource.cache
+D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csproj.CoreCompileInputs.cache
+D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.exe
+D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.pdb
+D:\ProjectUI\ProjectUI\bin\Debug\Oracle.DataAccess.dll
+D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csproj.CopyComplete

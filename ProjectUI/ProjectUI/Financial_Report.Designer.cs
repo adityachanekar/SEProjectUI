@@ -1,6 +1,6 @@
 ﻿namespace ProjectUI
 {
-    partial class index
+    partial class Financial_Report
     {
         /// <summary>
         /// Required designer variable.
@@ -28,27 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(index));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Financial_Report));
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonExpense = new System.Windows.Forms.Button();
             this.buttonIncome = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonFinRep = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.buttonFinRep = new System.Windows.Forms.Button();
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,8 +58,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(202, 656);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(202, 617);
+            this.panel1.TabIndex = 8;
             // 
             // buttonExpense
             // 
@@ -103,14 +101,14 @@
             this.buttonHome.ForeColor = System.Drawing.Color.White;
             this.buttonHome.Image = ((System.Drawing.Image)(resources.GetObject("buttonHome.Image")));
             this.buttonHome.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonHome.Location = new System.Drawing.Point(3, 177);
+            this.buttonHome.Location = new System.Drawing.Point(3, 176);
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Size = new System.Drawing.Size(196, 110);
             this.buttonHome.TabIndex = 2;
             this.buttonHome.Text = "Home";
             this.buttonHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonHome.UseVisualStyleBackColor = true;
-            this.buttonHome.Click += new System.EventHandler(this.button1_Click);
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
             // panel2
             // 
@@ -132,87 +130,6 @@
             this.button5.TabIndex = 2;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.buttonFinRep);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(202, 539);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(983, 117);
-            this.panel3.TabIndex = 1;
-            // 
-            // buttonFinRep
-            // 
-            this.buttonFinRep.FlatAppearance.BorderSize = 0;
-            this.buttonFinRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonFinRep.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFinRep.ForeColor = System.Drawing.Color.White;
-            this.buttonFinRep.Image = ((System.Drawing.Image)(resources.GetObject("buttonFinRep.Image")));
-            this.buttonFinRep.Location = new System.Drawing.Point(784, 3);
-            this.buttonFinRep.Name = "buttonFinRep";
-            this.buttonFinRep.Size = new System.Drawing.Size(196, 110);
-            this.buttonFinRep.TabIndex = 2;
-            this.buttonFinRep.Text = "Financial Report";
-            this.buttonFinRep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonFinRep.UseVisualStyleBackColor = true;
-            this.buttonFinRep.Click += new System.EventHandler(this.buttonFinRep_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(254, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 43);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Welcome!";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(257, 157);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "<Includes name>";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(254, 223);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Income: ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(252, 265);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Today\'s Expenses: ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(252, 307);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 25);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Spending Limit for ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(418, 307);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 25);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "<Month name>:";
-            // 
             // button7
             // 
             this.button7.FlatAppearance.BorderSize = 0;
@@ -221,57 +138,114 @@
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(1026, 12);
+            this.button7.Location = new System.Drawing.Point(1042, 12);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(147, 45);
-            this.button7.TabIndex = 4;
+            this.button7.Size = new System.Drawing.Size(115, 45);
+            this.button7.TabIndex = 9;
             this.button7.Text = "Logout ";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(231, 281);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(912, 311);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(614, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 28);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Financial Report";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(363, 150);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 24);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "From:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(391, 196);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 24);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "To:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(440, 196);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(258, 26);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(440, 150);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(258, 26);
+            this.dateTimePicker2.TabIndex = 13;
+            // 
+            // buttonFinRep
+            // 
+            this.buttonFinRep.FlatAppearance.BorderSize = 0;
+            this.buttonFinRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFinRep.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFinRep.ForeColor = System.Drawing.Color.White;
+            this.buttonFinRep.Image = ((System.Drawing.Image)(resources.GetObject("buttonFinRep.Image")));
+            this.buttonFinRep.Location = new System.Drawing.Point(771, 117);
+            this.buttonFinRep.Name = "buttonFinRep";
+            this.buttonFinRep.Size = new System.Drawing.Size(196, 110);
+            this.buttonFinRep.TabIndex = 14;
+            this.buttonFinRep.Text = "Search";
+            this.buttonFinRep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonFinRep.UseVisualStyleBackColor = true;
+            // 
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panelLeft.Location = new System.Drawing.Point(205, 177);
+            this.panelLeft.Location = new System.Drawing.Point(208, 176);
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(10, 110);
-            this.panelLeft.TabIndex = 5;
+            this.panelLeft.TabIndex = 15;
+            this.panelLeft.Visible = false;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(340, 223);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 25);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Income: ";
-            // 
-            // index
+            // Financial_Report
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1185, 656);
+            this.ClientSize = new System.Drawing.Size(1169, 617);
             this.Controls.Add(this.panelLeft);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.buttonFinRep);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "index";
-            this.Text = "index";
-            this.Load += new System.EventHandler(this.index_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Financial_Report";
+            this.Text = "Financial_Report";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,21 +254,19 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonExpense;
         private System.Windows.Forms.Button buttonIncome;
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button buttonExpense;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button buttonFinRep;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button buttonFinRep;
         private System.Windows.Forms.Panel panelLeft;
-        private System.Windows.Forms.Label label7;
     }
 }

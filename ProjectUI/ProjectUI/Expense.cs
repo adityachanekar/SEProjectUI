@@ -22,7 +22,7 @@ namespace ProjectUI
             panelLeft.Top = button1.Top;
             this.Hide();
             index f = new index();
-            f.ShowDialog();
+            f.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -30,7 +30,19 @@ namespace ProjectUI
             panelLeft.Top = button2.Top;
             this.Hide();
             Income f = new Income();
-            f.ShowDialog();
+            f.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 f = new Form1();
+            f.Show();
+        }
+
+        private void Expense_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
