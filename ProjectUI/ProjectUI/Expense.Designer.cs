@@ -46,7 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -178,6 +178,7 @@
             this.button4.Text = "Add";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button7
             // 
@@ -218,7 +219,7 @@
             this.textBox2.Location = new System.Drawing.Point(592, 220);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 26);
+            this.textBox2.Size = new System.Drawing.Size(258, 22);
             this.textBox2.TabIndex = 14;
             // 
             // textBox1
@@ -230,7 +231,7 @@
             this.textBox1.Location = new System.Drawing.Point(592, 165);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 26);
+            this.textBox1.Size = new System.Drawing.Size(258, 22);
             this.textBox1.TabIndex = 15;
             // 
             // label3
@@ -239,7 +240,7 @@
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(499, 271);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 32);
+            this.label3.Size = new System.Drawing.Size(52, 25);
             this.label3.TabIndex = 11;
             this.label3.Text = "Date";
             // 
@@ -249,7 +250,7 @@
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(471, 216);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 32);
+            this.label2.Size = new System.Drawing.Size(80, 25);
             this.label2.TabIndex = 12;
             this.label2.Text = "Amount";
             // 
@@ -259,28 +260,23 @@
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(445, 161);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 32);
+            this.label1.Size = new System.Drawing.Size(106, 25);
             this.label1.TabIndex = 13;
             this.label1.Text = "Particulars";
             // 
-            // textBox3
+            // dateTimePicker1
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.textBox3.Location = new System.Drawing.Point(592, 277);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(258, 26);
-            this.textBox3.TabIndex = 14;
+            this.dateTimePicker1.Location = new System.Drawing.Point(592, 271);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(258, 26);
+            this.dateTimePicker1.TabIndex = 11;
             // 
             // Expense
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1185, 656);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
@@ -295,8 +291,9 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Expense";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expense";
             this.Load += new System.EventHandler(this.Expense_Load);
             this.panel1.ResumeLayout(false);
@@ -325,6 +322,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
