@@ -55,7 +55,7 @@
             this.label1.Location = new System.Drawing.Point(329, 156);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 25);
+            this.label1.Size = new System.Drawing.Size(85, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -67,7 +67,7 @@
             this.label2.Location = new System.Drawing.Point(329, 209);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 25);
+            this.label2.Size = new System.Drawing.Size(84, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Last Name";
             this.label2.Click += new System.EventHandler(this.label1_Click);
@@ -79,7 +79,7 @@
             this.label3.Location = new System.Drawing.Point(329, 262);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 25);
+            this.label3.Size = new System.Drawing.Size(81, 21);
             this.label3.TabIndex = 0;
             this.label3.Text = "Username";
             this.label3.Click += new System.EventHandler(this.label1_Click);
@@ -91,7 +91,7 @@
             this.label4.Location = new System.Drawing.Point(329, 315);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 25);
+            this.label4.Size = new System.Drawing.Size(40, 21);
             this.label4.TabIndex = 0;
             this.label4.Text = "DOB";
             this.label4.Click += new System.EventHandler(this.label1_Click);
@@ -103,7 +103,7 @@
             this.label5.Location = new System.Drawing.Point(329, 368);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 25);
+            this.label5.Size = new System.Drawing.Size(81, 21);
             this.label5.TabIndex = 0;
             this.label5.Text = "Mobile No.";
             this.label5.Click += new System.EventHandler(this.label1_Click);
@@ -115,7 +115,7 @@
             this.label6.Location = new System.Drawing.Point(329, 421);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 25);
+            this.label6.Size = new System.Drawing.Size(76, 21);
             this.label6.TabIndex = 0;
             this.label6.Text = "Password";
             this.label6.Click += new System.EventHandler(this.label1_Click);
@@ -129,7 +129,7 @@
             this.textBox1.Location = new System.Drawing.Point(475, 153);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 26);
+            this.textBox1.Size = new System.Drawing.Size(258, 22);
             this.textBox1.TabIndex = 5;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -142,7 +142,7 @@
             this.textBox2.Location = new System.Drawing.Point(475, 211);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 26);
+            this.textBox2.Size = new System.Drawing.Size(258, 22);
             this.textBox2.TabIndex = 5;
             // 
             // textBox3
@@ -154,7 +154,7 @@
             this.textBox3.Location = new System.Drawing.Point(475, 265);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(258, 26);
+            this.textBox3.Size = new System.Drawing.Size(258, 22);
             this.textBox3.TabIndex = 5;
             // 
             // textBox5
@@ -166,7 +166,7 @@
             this.textBox5.Location = new System.Drawing.Point(475, 372);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(258, 26);
+            this.textBox5.Size = new System.Drawing.Size(258, 22);
             this.textBox5.TabIndex = 5;
             // 
             // textBox6
@@ -178,7 +178,7 @@
             this.textBox6.Location = new System.Drawing.Point(475, 421);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(258, 26);
+            this.textBox6.Size = new System.Drawing.Size(258, 22);
             this.textBox6.TabIndex = 5;
             // 
             // button1
@@ -201,7 +201,7 @@
             this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(460, 34);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(339, 39);
+            this.label8.Size = new System.Drawing.Size(273, 34);
             this.label8.TabIndex = 8;
             this.label8.Text = "New User Registration";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -212,7 +212,7 @@
             this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(740, 424);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(272, 20);
+            this.label9.Size = new System.Drawing.Size(209, 16);
             this.label9.TabIndex = 8;
             this.label9.Text = "* Alphanumeric, less than 14 characters";
             this.label9.Click += new System.EventHandler(this.label8_Click);
@@ -244,7 +244,7 @@
             this.textBox4.Location = new System.Drawing.Point(475, 314);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(258, 26);
+            this.textBox4.Size = new System.Drawing.Size(258, 22);
             this.textBox4.TabIndex = 5;
             // 
             // label7
@@ -253,7 +253,7 @@
             this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(740, 317);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(144, 20);
+            this.label7.Size = new System.Drawing.Size(112, 16);
             this.label7.TabIndex = 8;
             this.label7.Text = "* Format yyyy-mm-dd";
             this.label7.Click += new System.EventHandler(this.label8_Click);
@@ -282,9 +282,10 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Signuppage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signuppage";
             this.Load += new System.EventHandler(this.Signuppage_Load);
             this.ResumeLayout(false);
