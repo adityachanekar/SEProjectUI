@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=2.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +52,12 @@
     </Compile>
     <Compile Include="Expense.Designer.cs">
       <DependentUpon>Expense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financial_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial_Report.Designer.cs">
+      <DependentUpon>Financial_Report.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -80,6 +87,9 @@
     </Compile>
     <EmbeddedResource Include="Expense.resx">
       <DependentUpon>Expense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial_Report.resx">
+      <DependentUpon>Financial_Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
