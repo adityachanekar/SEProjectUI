@@ -47,3 +47,20 @@ D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.exe
 D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.pdb
 D:\ProjectUI\ProjectUI\bin\Debug\Oracle.DataAccess.dll
 D:\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csproj.CopyComplete
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csprojAssemblyReference.cache
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Expense.resources
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Financial_Report.resources
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Form1.resources
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Income.resources
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Debug\ProjectUI.index.resources
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Properties.Resources.resources
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Debug\ProjectUI.Signuppage.resources
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csproj.GenerateResource.cache
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csproj.CoreCompileInputs.cache
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Debug\ProjectUI.exe
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Debug\ProjectUI.pdb
+D:\Daily Expense Manager\ProjectUI\ProjectUI\bin\Debug\ProjectUI.exe.config
+D:\Daily Expense Manager\ProjectUI\ProjectUI\bin\Debug\ProjectUI.exe
+D:\Daily Expense Manager\ProjectUI\ProjectUI\bin\Debug\ProjectUI.pdb
+D:\Daily Expense Manager\ProjectUI\ProjectUI\bin\Debug\Oracle.DataAccess.dll
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Debug\ProjectUI.csproj.CopyComplete

@@ -14,7 +14,9 @@ namespace ProjectUI
     public partial class index : Form
     {
         public int userid;
+        double MonthlyExpense=0, MonthlyIncome=0,SpendingLimit=0;
         public string connectionString;
+        
         public index()
         {
             InitializeComponent();
@@ -33,10 +35,55 @@ namespace ProjectUI
             label2.Text = fname + " " + lname;
             con.Close();
 
-            string month = DateTime.Today.ToString("MMMM");
+
+
+            string month = DateTime.Today.ToString("MMMM-yyyy");
             label6.Text = month;
+            income_expense_calc();
+            label7.Text = MonthlyIncome.ToString();
+            label8.Text = MonthlyExpense.ToString();
+            label9.Text = SpendingLimit.ToString();
+            if (SpendingLimit < 0)
+            {
+                MessageBox.Show("You are in Debt.\nKindly manage funds properly","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+        
 
+        }
+        public void income_expense_calc()
+        {
+            string today = DateTime.Today.ToString("yyyy-MM-dd");
+            string thismonth = DateTime.Today.ToString("yyyy-MM");
+            string sql1 = "SELECT INCOMEAMOUNT FROM INCOME WHERE USERID = "+userid+"" +
+                "AND INCOMEDATE >= DATE'"+thismonth+"-01' AND INCOMEDATE < DATE'"+today+"'";
+            string sql2 = "SELECT EXPENSEAMOUNT FROM EXPENSE WHERE USERID = " + userid + "" +
+                "AND EXPENSEDATE >= DATE'" + thismonth + "-01' AND EXPENSEDATE < DATE'" + today + "'";
 
+            OracleConnection con = new OracleConnection(connectionString);
+            con.Open();
+            OracleDataAdapter adt1, adt2;
+            DataTable table1, table2;
+
+            adt1 = new OracleDataAdapter(sql1, con);
+            table1 = new DataTable();
+            adt1.Fill(table1);
+            adt2 = new OracleDataAdapter(sql2, con);
+            table2 = new DataTable();
+            adt2.Fill(table2);
+
+            //Calculates Sum of Expense and Income for the present month
+            if (table1.Rows.Count !=0)
+            {
+                for (int i = 0; i < table1.Rows.Count; i++)
+                    MonthlyIncome += double.Parse(table1.Rows[i][0].ToString());
+            }
+
+            if (table2.Rows.Count != 0)
+            {
+                for (int i = 0; i < table2.Rows.Count; i++)
+                    MonthlyExpense += double.Parse(table2.Rows[i][0].ToString());
+            }
+            SpendingLimit = MonthlyIncome - MonthlyExpense;
 
         }
 

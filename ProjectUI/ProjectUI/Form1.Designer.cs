@@ -67,7 +67,7 @@
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(393, 189);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(389, 41);
+            this.label1.Size = new System.Drawing.Size(483, 51);
             this.label1.TabIndex = 3;
             this.label1.Text = "Daily Expense Manager";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -81,9 +81,11 @@
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.textBox1.Location = new System.Drawing.Point(500, 287);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 26);
+            this.textBox1.Size = new System.Drawing.Size(175, 30);
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = " Username";
+            this.textBox1.TabIndexChanged += new System.EventHandler(this.textBox1_TabIndexChanged);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -94,7 +96,7 @@
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.textBox2.Location = new System.Drawing.Point(500, 335);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 26);
+            this.textBox2.Size = new System.Drawing.Size(175, 30);
             this.textBox2.TabIndex = 4;
             this.textBox2.Text = " Password";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);

@@ -36,7 +36,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.buttonFinRep = new System.Windows.Forms.Button();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -147,21 +147,13 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(231, 281);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(912, 311);
-            this.dataGridView1.TabIndex = 10;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(614, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 28);
+            this.label1.Size = new System.Drawing.Size(204, 34);
             this.label1.TabIndex = 11;
             this.label1.Text = "Financial Report";
             // 
@@ -171,7 +163,7 @@
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(363, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 24);
+            this.label2.Size = new System.Drawing.Size(72, 30);
             this.label2.TabIndex = 11;
             this.label2.Text = "From:";
             // 
@@ -181,22 +173,22 @@
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(391, 196);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 24);
+            this.label3.Size = new System.Drawing.Size(43, 30);
             this.label3.TabIndex = 11;
             this.label3.Text = "To:";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(440, 196);
+            this.dateTimePicker1.Location = new System.Drawing.Point(441, 150);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(258, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(258, 30);
             this.dateTimePicker1.TabIndex = 12;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(440, 150);
+            this.dateTimePicker2.Location = new System.Drawing.Point(441, 197);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(258, 26);
+            this.dateTimePicker2.Size = new System.Drawing.Size(258, 30);
             this.dateTimePicker2.TabIndex = 13;
             // 
             // buttonFinRep
@@ -213,6 +205,7 @@
             this.buttonFinRep.Text = "Search";
             this.buttonFinRep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonFinRep.UseVisualStyleBackColor = true;
+            this.buttonFinRep.Click += new System.EventHandler(this.buttonFinRep_Click);
             // 
             // panelLeft
             // 
@@ -222,6 +215,14 @@
             this.panelLeft.Size = new System.Drawing.Size(10, 110);
             this.panelLeft.TabIndex = 15;
             this.panelLeft.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(231, 281);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(912, 311);
+            this.dataGridView1.TabIndex = 10;
             // 
             // Financial_Report
             // 
@@ -261,7 +262,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -269,5 +269,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button buttonFinRep;
         private System.Windows.Forms.Panel panelLeft;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

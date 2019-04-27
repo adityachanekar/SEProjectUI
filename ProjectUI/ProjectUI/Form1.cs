@@ -76,5 +76,15 @@ namespace ProjectUI
         {
             this.Close();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TabIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -86,15 +86,21 @@ namespace ProjectUI
             string sql = "INSERT INTO INCOME(INCOMEID,INCOMEPARTICULAR,INCOMEAMOUNT,INCOMEDATE,USERID)" +
                 "VALUES ("+incomeidmax+",'"+particular+"',"+amount+",DATE'"+date+"',"+userid+") ";
 
-            
-            con.Open();
-            OracleCommand cmd = new OracleCommand(sql, con);
-            cmd.CommandType = CommandType.Text;
+            try
+            {
+                con.Open();
+                OracleCommand cmd = new OracleCommand(sql, con);
+                cmd.CommandType = CommandType.Text;
 
-            cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
 
-            MessageBox.Show(textBox1.Text + " : " + textBox2.Text + " Added");
-
+                MessageBox.Show("Income of \n"+textBox1.Text + " : " + textBox2.Text + " Added");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Try Again");
+                throw;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -106,7 +112,7 @@ namespace ProjectUI
             particular = textBox1.Text;
             amount = double.Parse(textBox2.Text);
             date = dateTimePicker1.Text;
-            int incomeId;
+            
 
             //search if entry exists;
 
@@ -123,21 +129,26 @@ namespace ProjectUI
             entry.Fill(dt);
             con.Close();
 
-            incomeId = int.Parse(dt.Rows[0][0].ToString());
-            string sql = "UPDATE INCOME " +
+            
+            string Sql(int incomeId)
+            {
+                return "UPDATE INCOME " +
                 " SET INCOMEAMOUNT = " + amount + "" +
                 "WHERE INCOMEID =" + incomeId + "";
+            }
+            
 
 
 
             if (dt.Rows.Count == 1)
             {
+                int incomeId = int.Parse(dt.Rows[0][0].ToString());
 
-                DialogResult msg = MessageBox.Show("Do you want to Edit Income Amount?","Yes?",MessageBoxButtons.YesNo);
+                DialogResult msg = MessageBox.Show("Do you want to Edit Income Amount?","Yes?",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (msg == DialogResult.Yes )
                 {
                     con.Open();
-                    OracleCommand cmd = new OracleCommand(sql, con);
+                    OracleCommand cmd = new OracleCommand(Sql(incomeId), con);
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
                     cmd.Dispose();
@@ -168,7 +179,7 @@ namespace ProjectUI
             particular = textBox1.Text;
             //amount = double.Parse(textBox2.Text);
             date = dateTimePicker1.Text;
-            int incomeId;
+            
 
             //search if entry exists;
 
@@ -184,31 +195,42 @@ namespace ProjectUI
             DataTable dt = new DataTable();
             entry.Fill(dt);
             con.Close();
-            incomeId = int.Parse(dt.Rows[0][0].ToString());
+            
             //Delete Query
-            string sql = "DELETE * FROM INCOME WHERE INCOMEID=" + incomeId + "";
-
-            if(dt.Rows.Count == 1)
+            string Sql(int incomeId)
             {
-                DialogResult dr = MessageBox.Show("Do you want to delete the entry?", "Yes?", MessageBoxButtons.YesNo);
-                if (dr == DialogResult.Yes) 
+                return "DELETE * FROM INCOME WHERE INCOMEID=" + incomeId + "";
+            }
+            try
+            {
+                if (dt.Rows.Count == 1)
                 {
-                    con.Open();
-                    OracleCommand cmd = new OracleCommand(sql1, con);
-                    cmd.CommandType = CommandType.Text;
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("" + particular + " deleted.");
+                    int incomeId = int.Parse(dt.Rows[0][0].ToString());
+                    DialogResult dr = MessageBox.Show("Do you want to delete the entry?", "Yes?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (dr == DialogResult.Yes)
+                    {
+                        con.Open();
+                        OracleCommand cmd = new OracleCommand(Sql(incomeId), con);
+                        cmd.CommandType = CommandType.Text;
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("" + particular + " deleted.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Entry not deleted");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("");
+                    MessageBox.Show("Entry does not exist");
                 }
             }
-            else
-            {
-                MessageBox.Show("Entry does not exist");
-            }
 
+            catch (Exception)
+            {
+                MessageBox.Show("Try Again");
+                throw;
+            }
 
         }
     }

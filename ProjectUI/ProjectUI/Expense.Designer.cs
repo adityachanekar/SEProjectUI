@@ -194,6 +194,7 @@
             this.button7.Text = "Edit";
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -209,6 +210,7 @@
             this.button8.Text = "Delete";
             this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // textBox2
             // 
@@ -219,7 +221,7 @@
             this.textBox2.Location = new System.Drawing.Point(592, 220);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 22);
+            this.textBox2.Size = new System.Drawing.Size(258, 26);
             this.textBox2.TabIndex = 14;
             // 
             // textBox1
@@ -231,7 +233,7 @@
             this.textBox1.Location = new System.Drawing.Point(592, 165);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 22);
+            this.textBox1.Size = new System.Drawing.Size(258, 26);
             this.textBox1.TabIndex = 15;
             // 
             // label3
@@ -240,7 +242,7 @@
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(499, 271);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 25);
+            this.label3.Size = new System.Drawing.Size(65, 32);
             this.label3.TabIndex = 11;
             this.label3.Text = "Date";
             // 
@@ -250,7 +252,7 @@
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(471, 216);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 25);
+            this.label2.Size = new System.Drawing.Size(98, 32);
             this.label2.TabIndex = 12;
             this.label2.Text = "Amount";
             // 
@@ -260,7 +262,7 @@
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(445, 161);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 25);
+            this.label1.Size = new System.Drawing.Size(130, 32);
             this.label1.TabIndex = 13;
             this.label1.Text = "Particulars";
             // 
@@ -268,7 +270,7 @@
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(592, 271);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(258, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(258, 30);
             this.dateTimePicker1.TabIndex = 11;
             // 
             // Expense

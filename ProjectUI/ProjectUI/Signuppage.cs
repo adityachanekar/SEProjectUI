@@ -101,6 +101,9 @@ namespace ProjectUI
                 con.Close();
                 
                 MessageBox.Show("User Registered");
+                Form1 f = new Form1();
+                this.Hide();
+                f.Show();
             }
             catch(Exception )
             {
