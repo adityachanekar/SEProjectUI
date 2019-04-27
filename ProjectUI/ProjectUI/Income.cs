@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
+using System.Text.RegularExpressions;
 
 namespace ProjectUI
 {
@@ -32,6 +33,7 @@ namespace ProjectUI
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
+            index.income_expense_calc();
             panelLeft.Top = buttonHome.Top;
             this.Hide();
             index f = new index();
@@ -58,48 +60,57 @@ namespace ProjectUI
             //variables
             string particular, date;
             double amount;
-
-            particular = textBox1.Text;
-            amount = double.Parse(textBox2.Text);
-            date = dateTimePicker1.Text;
+            string ErrorMsg;
+            var val = validation(textBox2.Text,out ErrorMsg);
             
 
-           
 
-            // finds no of entries
-            OracleConnection con = new OracleConnection(connectionString);
-            OracleDataAdapter no_of_entries
-                = new OracleDataAdapter("SELECT * FROM INCOME", con);
-            DataTable detail_count = new DataTable();
-            no_of_entries.Fill(detail_count);
-            int incomeidmax = detail_count.Rows.Count;
-            if (incomeidmax != 0)
+
+            if (!val)
             {
-                incomeidmax = int.Parse(detail_count.Rows[0][0].ToString());
+                MessageBox.Show(ErrorMsg, "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            incomeidmax++;
-            con.Close();
-
-
-
-
-            string sql = "INSERT INTO INCOME(INCOMEID,INCOMEPARTICULAR,INCOMEAMOUNT,INCOMEDATE,USERID)" +
-                "VALUES ("+incomeidmax+",'"+particular+"',"+amount+",DATE'"+date+"',"+userid+") ";
-
-            try
+            else
             {
-                con.Open();
-                OracleCommand cmd = new OracleCommand(sql, con);
-                cmd.CommandType = CommandType.Text;
+                particular = textBox1.Text;
+                amount = double.Parse(textBox2.Text);
+                date = dateTimePicker1.Text;
 
-                cmd.ExecuteNonQuery();
+                // finds no of entries
+                OracleConnection con = new OracleConnection(connectionString);
+                OracleDataAdapter no_of_entries
+                    = new OracleDataAdapter("SELECT * FROM INCOME", con);
+                DataTable detail_count = new DataTable();
+                no_of_entries.Fill(detail_count);
+                int incomeidmax = detail_count.Rows.Count;
+                if (incomeidmax != 0)
+                {
+                    incomeidmax = int.Parse(detail_count.Rows[0][0].ToString());
+                }
+                incomeidmax++;
+                con.Close();
 
-                MessageBox.Show("Income of \n"+textBox1.Text + " : " + textBox2.Text + " Added");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Try Again");
-                throw;
+
+
+
+                string sql = "INSERT INTO INCOME(INCOMEID,INCOMEPARTICULAR,INCOMEAMOUNT,INCOMEDATE,USERID)" +
+                    "VALUES (" + incomeidmax + ",'" + particular + "'," + amount + ",DATE'" + date + "'," + userid + ") ";
+
+                try
+                {
+                    con.Open();
+                    OracleCommand cmd = new OracleCommand(sql, con);
+                    cmd.CommandType = CommandType.Text;
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Income of \n" + textBox1.Text + " : " + textBox2.Text + " Added");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Try Again");
+                    throw;
+                }
             }
         }
 
@@ -108,66 +119,80 @@ namespace ProjectUI
             //variables
             string particular, date;
             double amount;
-
-            particular = textBox1.Text;
-            amount = double.Parse(textBox2.Text);
-            date = dateTimePicker1.Text;
             
+            string ErrorMsg;
+            var val = validation(textBox2.Text, out ErrorMsg);
 
-            //search if entry exists;
 
-            string sql1 = "SELECT * FROM INCOME " +
-                "WHERE USERID = "+userid+"AND INCOMEPARTICULAR = '"+particular+"'" +
-                " AND INCOMEDATE = DATE'"+date+"'";
-            
-            
-            OracleConnection con = new OracleConnection(connectionString);
-            con.Open();
-            OracleDataAdapter entry
-                = new OracleDataAdapter(sql1, con);
-            DataTable dt = new DataTable();
-            entry.Fill(dt);
-            con.Close();
-
-            
-            string Sql(int incomeId)
+            if (!val)
             {
-                return "UPDATE INCOME " +
-                " SET INCOMEAMOUNT = " + amount + "" +
-                "WHERE INCOMEID =" + incomeId + "";
-            }
-            
-
-
-
-            if (dt.Rows.Count == 1)
-            {
-                int incomeId = int.Parse(dt.Rows[0][0].ToString());
-
-                DialogResult msg = MessageBox.Show("Do you want to Edit Income Amount?","Yes?",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (msg == DialogResult.Yes )
-                {
-                    con.Open();
-                    OracleCommand cmd = new OracleCommand(Sql(incomeId), con);
-                    cmd.CommandType = CommandType.Text;
-                    cmd.ExecuteNonQuery();
-                    cmd.Dispose();
-                    con.Close();
-                    MessageBox.Show("" + particular + " Updated!");
-                }
-                else
-                {
-                    MessageBox.Show("Amount Not updated");
-                }
-                
-                    
-                
+                MessageBox.Show(ErrorMsg, "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Entry Does not exist");
-            }
+                particular = textBox1.Text;
+                amount = double.Parse(textBox2.Text);
+                date = dateTimePicker1.Text;
+                //search if entry exists;
 
+                string sql1 = "SELECT * FROM INCOME " +
+                "WHERE USERID = " + userid + "AND INCOMEPARTICULAR = '" + particular + "'" +
+                " AND INCOMEDATE = DATE'" + date + "'";
+
+
+                OracleConnection con = new OracleConnection(connectionString);
+                con.Open();
+                OracleDataAdapter entry
+                    = new OracleDataAdapter(sql1, con);
+                DataTable dt = new DataTable();
+                entry.Fill(dt);
+                con.Close();
+
+
+                string Sql(int incomeId)
+                {
+                    return "UPDATE INCOME " +
+                    " SET INCOMEAMOUNT = " + amount + "" +
+                    "WHERE INCOMEID =" + incomeId + "";
+                }
+
+
+
+                try
+                {
+                    if (dt.Rows.Count == 1)
+                    {
+                        int incomeId = int.Parse(dt.Rows[0][0].ToString());
+
+                        DialogResult msg = MessageBox.Show("Do you want to Edit Income Amount?", "Yes?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (msg == DialogResult.Yes)
+                        {
+                            con.Open();
+                            OracleCommand cmd = new OracleCommand(Sql(incomeId), con);
+                            cmd.CommandType = CommandType.Text;
+                            cmd.ExecuteNonQuery();
+                            cmd.Dispose();
+                            con.Close();
+                            MessageBox.Show("" + particular + " Updated!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Amount Not updated");
+                        }
+
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Entry Does not exist");
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Try again");
+                }
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -175,63 +200,85 @@ namespace ProjectUI
             //variables
             string particular, date;
             double amount;
-
-            particular = textBox1.Text;
-            //amount = double.Parse(textBox2.Text);
-            date = dateTimePicker1.Text;
             
+            string ErrorMsg;
+            var val = validation(textBox2.Text, out ErrorMsg);
 
-            //search if entry exists;
+            if (!val)
+            {
+                MessageBox.Show(ErrorMsg, "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                particular = textBox1.Text;
+                amount = double.Parse(textBox2.Text);
+                date = dateTimePicker1.Text;
+                //search if entry exists;
 
-            string sql1 = "SELECT * FROM INCOME " +
+                string sql1 = "SELECT * FROM INCOME " +
                 "WHERE USERID = " + userid + "AND INCOMEPARTICULAR = '" + particular + "'" +
                 " AND INCOMEDATE = DATE'" + date + "'";
 
 
-            OracleConnection con = new OracleConnection(connectionString);
-            con.Open();
-            OracleDataAdapter entry
-                = new OracleDataAdapter(sql1, con);
-            DataTable dt = new DataTable();
-            entry.Fill(dt);
-            con.Close();
-            
-            //Delete Query
-            string Sql(int incomeId)
-            {
-                return "DELETE * FROM INCOME WHERE INCOMEID=" + incomeId + "";
-            }
-            try
-            {
-                if (dt.Rows.Count == 1)
+                OracleConnection con = new OracleConnection(connectionString);
+                con.Open();
+                OracleDataAdapter entry
+                    = new OracleDataAdapter(sql1, con);
+                DataTable dt = new DataTable();
+                entry.Fill(dt);
+                con.Close();
+
+                //Delete Query
+                string Sql(int incomeId)
                 {
-                    int incomeId = int.Parse(dt.Rows[0][0].ToString());
-                    DialogResult dr = MessageBox.Show("Do you want to delete the entry?", "Yes?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-                    if (dr == DialogResult.Yes)
+                    return "DELETE FROM INCOME WHERE INCOMEID=" + incomeId + "";
+                }
+                try
+                {
+                    if (dt.Rows.Count == 1)
                     {
-                        con.Open();
-                        OracleCommand cmd = new OracleCommand(Sql(incomeId), con);
-                        cmd.CommandType = CommandType.Text;
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("" + particular + " deleted.");
+                        int incomeId = int.Parse(dt.Rows[0][0].ToString());
+                        DialogResult dr = MessageBox.Show("Do you want to delete the entry?", "Yes?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                        if (dr == DialogResult.Yes)
+                        {
+                            con.Open();
+                            OracleCommand cmd = new OracleCommand(Sql(incomeId), con);
+                            cmd.CommandType = CommandType.Text;
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("" + particular + " deleted.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Entry not deleted");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Entry not deleted");
+                        MessageBox.Show("Entry does not exist");
                     }
                 }
-                else
+
+                catch (Exception)
                 {
-                    MessageBox.Show("Entry does not exist");
+                    MessageBox.Show("Try Again");
+
                 }
             }
 
-            catch (Exception)
-            {
-                MessageBox.Show("Try Again");
-                throw;
-            }
+        }
 
+        public bool validation(string input,out string error)
+        {
+            error = string.Empty;
+            var amt = new Regex(@"^[0-9]*(?:\.[0-9]*)?$");
+
+            if (!amt.IsMatch(input))
+            {
+                error = "Amount should consists of Numbers only";
+                return false;
+            }
+            else
+                return true;
         }
     }
 }
