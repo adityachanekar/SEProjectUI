@@ -81,7 +81,7 @@
             this.button3.Location = new System.Drawing.Point(3, 412);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(196, 110);
-            this.button3.TabIndex = 2;
+            this.button3.TabIndex = 9;
             this.button3.Text = "Expense";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
@@ -96,7 +96,7 @@
             this.button2.Location = new System.Drawing.Point(3, 294);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(196, 110);
-            this.button2.TabIndex = 2;
+            this.button2.TabIndex = 8;
             this.button2.Text = "Income";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
@@ -113,7 +113,7 @@
             this.button1.Location = new System.Drawing.Point(3, 176);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(196, 110);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 7;
             this.button1.Text = "Home";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
@@ -150,7 +150,7 @@
             this.button6.Location = new System.Drawing.Point(1029, 12);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(144, 45);
-            this.button6.TabIndex = 3;
+            this.button6.TabIndex = 10;
             this.button6.Text = "Logout ";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button6.UseVisualStyleBackColor = true;
@@ -174,7 +174,7 @@
             this.button4.Location = new System.Drawing.Point(345, 346);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(196, 110);
-            this.button4.TabIndex = 2;
+            this.button4.TabIndex = 4;
             this.button4.Text = "Add";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
@@ -190,7 +190,7 @@
             this.button7.Location = new System.Drawing.Point(602, 346);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(196, 110);
-            this.button7.TabIndex = 2;
+            this.button7.TabIndex = 5;
             this.button7.Text = "Edit";
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button7.UseVisualStyleBackColor = true;
@@ -206,7 +206,7 @@
             this.button8.Location = new System.Drawing.Point(894, 346);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(196, 110);
-            this.button8.TabIndex = 2;
+            this.button8.TabIndex = 6;
             this.button8.Text = "Delete";
             this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button8.UseVisualStyleBackColor = true;
@@ -216,25 +216,25 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.textBox2.Location = new System.Drawing.Point(592, 220);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 26);
-            this.textBox2.TabIndex = 14;
+            this.textBox2.Size = new System.Drawing.Size(258, 30);
+            this.textBox2.TabIndex = 2;
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.textBox1.Location = new System.Drawing.Point(592, 165);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 26);
-            this.textBox1.TabIndex = 15;
+            this.textBox1.Size = new System.Drawing.Size(258, 30);
+            this.textBox1.TabIndex = 1;
             // 
             // label3
             // 
@@ -271,7 +271,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(592, 271);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(258, 30);
-            this.dateTimePicker1.TabIndex = 11;
+            this.dateTimePicker1.TabIndex = 3;
             // 
             // Expense
             // 
@@ -294,6 +294,7 @@
             this.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Expense";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expense";
