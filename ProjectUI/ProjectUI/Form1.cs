@@ -46,7 +46,7 @@ namespace ProjectUI
             {
                 uid = d.Rows[0][0].ToString();
                 userid = int.Parse(uid);
-                MessageBox.Show("Successful, welcome user:"+ userid);
+                MessageBox.Show("Login Successful");
                 this.Hide();
                 index f = new index();
                 f.Show();

@@ -84,11 +84,10 @@ namespace ProjectUI
             //password validation
             string error;
             var val = validation(fname,lname,contact, username,password, out error);
-            MessageBox.Show(error,"Credential Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
 
-
-
+            if(!val)
+                MessageBox.Show(error,"Credential Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
             if (DOB.Value.Date > today.Value.Date)
             {
@@ -165,14 +164,19 @@ namespace ProjectUI
                 ErrorMessage = "Last Name should not be empty";
                 return false;
             }
+            else if (string.IsNullOrWhiteSpace(username))
+            {
+                ErrorMessage = "Username should not be empty";
+                return false;
+            }
             else if (string.IsNullOrWhiteSpace(contact))
             {
-                ErrorMessage = "Contact should not be empty";
+                ErrorMessage = "Mobile No. should not be empty";
                 return false;
             }
             else if (!contactNumber.IsMatch(contact) )
             {
-                ErrorMessage = "Contact No. should be 10 digits only";
+                ErrorMessage = "Mobile No. should be 10 digits only";
                 return false;
             }
             else if (string.IsNullOrWhiteSpace(input))

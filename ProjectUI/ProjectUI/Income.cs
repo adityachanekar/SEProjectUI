@@ -21,8 +21,9 @@ namespace ProjectUI
             InitializeComponent();
             userid = Form1.userid;
             connectionString = Form1.connectionString;
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+
+
+
 
         }
 
@@ -55,84 +56,124 @@ namespace ProjectUI
             f.Show();
         }
 
+        //Add Income
         private void button1_Click(object sender, EventArgs e)
         {
             //variables
             string particular, date;
             double amount;
+
+            //validation
+
+            DateTimePicker today = new DateTimePicker();
+            today.Value = DateTime.Today.Date;
             string ErrorMsg;
-            var val = validation(textBox2.Text,out ErrorMsg);
+            var val = validation(textBox1.Text,textBox2.Text,out ErrorMsg);
             
 
-
-
+            
+            
             if (!val)
             {
                 MessageBox.Show(ErrorMsg, "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(dateTimePicker1.Value.Date > today.Value)
+            {
+                MessageBox.Show("Entered Date falls after "+today.Value.ToString("dd-MM-yyyy")+"", "Date Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 particular = textBox1.Text;
                 amount = double.Parse(textBox2.Text);
-                date = dateTimePicker1.Text;
+                date = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd");
 
                 // finds no of entries
                 OracleConnection con = new OracleConnection(connectionString);
                 OracleDataAdapter no_of_entries
-                    = new OracleDataAdapter("SELECT * FROM INCOME", con);
+                    = new OracleDataAdapter("SELECT INCOMEID FROM INCOME", con);
                 DataTable detail_count = new DataTable();
                 no_of_entries.Fill(detail_count);
                 int incomeidmax = detail_count.Rows.Count;
                 if (incomeidmax != 0)
                 {
-                    incomeidmax = int.Parse(detail_count.Rows[0][0].ToString());
+                    for (int i = 0; i < detail_count.Rows.Count; i++)
+                    {
+                        int temp = int.Parse(detail_count.Rows[i][0].ToString());
+
+                        if (incomeidmax <= temp)
+                        incomeidmax = temp;
+                    }
                 }
                 incomeidmax++;
                 con.Close();
 
-
-
-
-                string sql = "INSERT INTO INCOME(INCOMEID,INCOMEPARTICULAR,INCOMEAMOUNT,INCOMEDATE,USERID)" +
-                    "VALUES (" + incomeidmax + ",'" + particular + "'," + amount + ",DATE'" + date + "'," + userid + ") ";
-
-                try
+                //checking for redundant entries
+                string redundant = "SELECT INCOMEID FROM INCOME" +
+                    " WHERE INCOMEPARTICULAR = '" + particular + "' AND " +
+                    "INCOMEAMOUNT = " + amount + " AND " +
+                    "INCOMEDATE = DATE'" + date + "' AND " +
+                    "USERID = " + userid + "";
+                con.Open();
+                OracleDataAdapter adt = new OracleDataAdapter(redundant, con);
+                DataTable dt = new DataTable();
+                adt.Fill(dt);
+                con.Close();
+                if (dt.Rows.Count != 0)
                 {
-                    con.Open();
-                    OracleCommand cmd = new OracleCommand(sql, con);
-                    cmd.CommandType = CommandType.Text;
-
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Income of \n" + textBox1.Text + " : " + textBox2.Text + " Added");
+                    MessageBox.Show("Entry aldready exist", "Duplicate not allowed", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                catch (Exception)
+
+                else
                 {
-                    MessageBox.Show("Try Again");
-                    throw;
+                    string sql = "INSERT INTO INCOME(INCOMEID,INCOMEPARTICULAR,INCOMEAMOUNT,INCOMEDATE,USERID)" +
+                        "VALUES (" + incomeidmax + ",'" + particular + "'," + amount + ",DATE'" + date + "'," + userid + ") ";
+
+                    try
+                    {
+                        con.Open();
+                        OracleCommand cmd = new OracleCommand(sql, con);
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Income of \n" + textBox1.Text + " : " + textBox2.Text + " Added");
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Try Again");
+                        throw;
+                    }
                 }
             }
         }
-
+        //Edit Income
         private void button2_Click(object sender, EventArgs e)
         {
             //variables
             string particular, date;
             double amount;
-            
+
+            //validation
+
+            DateTimePicker today = new DateTimePicker();
+            today.Value = DateTime.Today.Date;
             string ErrorMsg;
-            var val = validation(textBox2.Text, out ErrorMsg);
+            var val = validation(textBox1.Text,textBox2.Text, out ErrorMsg);
 
 
             if (!val)
             {
                 MessageBox.Show(ErrorMsg, "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (dateTimePicker1.Value.Date > today.Value)
+            {
+                MessageBox.Show("Entered Date falls after " + today.Value.ToString("dd-MM-yyyy") + "", "Date Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 particular = textBox1.Text;
                 amount = double.Parse(textBox2.Text);
-                date = dateTimePicker1.Text;
+                date = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd");
                 //search if entry exists;
 
                 string sql1 = "SELECT * FROM INCOME " +
@@ -164,7 +205,7 @@ namespace ProjectUI
                     {
                         int incomeId = int.Parse(dt.Rows[0][0].ToString());
 
-                        DialogResult msg = MessageBox.Show("Do you want to Edit Income Amount?", "Yes?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult msg = MessageBox.Show("Do you want to Edit Income Amount?", "Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (msg == DialogResult.Yes)
                         {
                             con.Open();
@@ -194,25 +235,33 @@ namespace ProjectUI
                 }
             }
         }
-
+        //delete income
         private void button3_Click(object sender, EventArgs e)
         {
             //variables
             string particular, date;
             double amount;
-            
+
+            //validation
+            DateTimePicker today = new DateTimePicker();
+            today.Value = DateTime.Today.Date;
             string ErrorMsg;
-            var val = validation(textBox2.Text, out ErrorMsg);
+            var val = validation(textBox1.Text,textBox2.Text, out ErrorMsg);
 
             if (!val)
             {
                 MessageBox.Show(ErrorMsg, "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (dateTimePicker1.Value.Date > today.Value)
+            {
+                MessageBox.Show("Entered Date falls after " + today.Value.ToString("dd-MM-yyyy") + "", "Date Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
             else
             {
                 particular = textBox1.Text;
                 amount = double.Parse(textBox2.Text);
-                date = dateTimePicker1.Text;
+                date = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd");
                 //search if entry exists;
 
                 string sql1 = "SELECT * FROM INCOME " +
@@ -238,7 +287,7 @@ namespace ProjectUI
                     if (dt.Rows.Count == 1)
                     {
                         int incomeId = int.Parse(dt.Rows[0][0].ToString());
-                        DialogResult dr = MessageBox.Show("Do you want to delete the entry?", "Yes?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                        DialogResult dr = MessageBox.Show("Do you want to delete the entry?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                         if (dr == DialogResult.Yes)
                         {
                             con.Open();
@@ -267,12 +316,22 @@ namespace ProjectUI
 
         }
 
-        public bool validation(string input,out string error)
+        public static bool validation(string particular, string amount,out string error)
         {
             error = string.Empty;
             var amt = new Regex(@"^[0-9]*(?:\.[0-9]*)?$");
 
-            if (!amt.IsMatch(input))
+            if (string.IsNullOrWhiteSpace(particular))
+            {
+                error = "Particulars should not be empty";
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(amount))
+            {
+                error = "Amount should not be empty";
+                return false;
+            }
+            else if (!amt.IsMatch(amount))
             {
                 error = "Amount should consists of Numbers only";
                 return false;
