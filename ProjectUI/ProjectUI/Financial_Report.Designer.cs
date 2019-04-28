@@ -71,7 +71,7 @@
             this.buttonExpense.Location = new System.Drawing.Point(3, 412);
             this.buttonExpense.Name = "buttonExpense";
             this.buttonExpense.Size = new System.Drawing.Size(196, 110);
-            this.buttonExpense.TabIndex = 2;
+            this.buttonExpense.TabIndex = 6;
             this.buttonExpense.Text = "Expense";
             this.buttonExpense.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonExpense.UseVisualStyleBackColor = true;
@@ -87,7 +87,7 @@
             this.buttonIncome.Location = new System.Drawing.Point(3, 294);
             this.buttonIncome.Name = "buttonIncome";
             this.buttonIncome.Size = new System.Drawing.Size(196, 110);
-            this.buttonIncome.TabIndex = 2;
+            this.buttonIncome.TabIndex = 5;
             this.buttonIncome.Text = "Income";
             this.buttonIncome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonIncome.UseVisualStyleBackColor = true;
@@ -104,7 +104,7 @@
             this.buttonHome.Location = new System.Drawing.Point(3, 176);
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Size = new System.Drawing.Size(196, 110);
-            this.buttonHome.TabIndex = 2;
+            this.buttonHome.TabIndex = 4;
             this.buttonHome.Text = "Home";
             this.buttonHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonHome.UseVisualStyleBackColor = true;
@@ -138,10 +138,10 @@
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(1042, 12);
+            this.button7.Location = new System.Drawing.Point(1032, 12);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(115, 45);
-            this.button7.TabIndex = 9;
+            this.button7.Size = new System.Drawing.Size(125, 50);
+            this.button7.TabIndex = 7;
             this.button7.Text = "Logout ";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = true;
@@ -182,14 +182,14 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(441, 150);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(258, 30);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dateTimePicker1.TabIndex = 1;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(441, 197);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(258, 30);
-            this.dateTimePicker2.TabIndex = 13;
+            this.dateTimePicker2.TabIndex = 2;
             // 
             // buttonFinRep
             // 
@@ -198,10 +198,10 @@
             this.buttonFinRep.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFinRep.ForeColor = System.Drawing.Color.White;
             this.buttonFinRep.Image = ((System.Drawing.Image)(resources.GetObject("buttonFinRep.Image")));
-            this.buttonFinRep.Location = new System.Drawing.Point(771, 117);
+            this.buttonFinRep.Location = new System.Drawing.Point(718, 133);
             this.buttonFinRep.Name = "buttonFinRep";
             this.buttonFinRep.Size = new System.Drawing.Size(196, 110);
-            this.buttonFinRep.TabIndex = 14;
+            this.buttonFinRep.TabIndex = 3;
             this.buttonFinRep.Text = "Search";
             this.buttonFinRep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonFinRep.UseVisualStyleBackColor = true;
@@ -218,10 +218,14 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(231, 281);
+            this.dataGridView1.Location = new System.Drawing.Point(441, 270);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(912, 311);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.ShowEditingIcon = false;
+            this.dataGridView1.Size = new System.Drawing.Size(443, 299);
             this.dataGridView1.TabIndex = 10;
             // 
             // Financial_Report

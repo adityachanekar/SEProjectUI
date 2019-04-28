@@ -77,7 +77,7 @@
             this.buttonExpense.Location = new System.Drawing.Point(3, 412);
             this.buttonExpense.Name = "buttonExpense";
             this.buttonExpense.Size = new System.Drawing.Size(196, 110);
-            this.buttonExpense.TabIndex = 2;
+            this.buttonExpense.TabIndex = 9;
             this.buttonExpense.Text = "Expense";
             this.buttonExpense.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonExpense.UseVisualStyleBackColor = true;
@@ -93,7 +93,7 @@
             this.buttonIncome.Location = new System.Drawing.Point(3, 294);
             this.buttonIncome.Name = "buttonIncome";
             this.buttonIncome.Size = new System.Drawing.Size(196, 110);
-            this.buttonIncome.TabIndex = 2;
+            this.buttonIncome.TabIndex = 8;
             this.buttonIncome.Text = "Income";
             this.buttonIncome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonIncome.UseVisualStyleBackColor = true;
@@ -109,7 +109,7 @@
             this.buttonHome.Location = new System.Drawing.Point(3, 176);
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Size = new System.Drawing.Size(196, 110);
-            this.buttonHome.TabIndex = 2;
+            this.buttonHome.TabIndex = 7;
             this.buttonHome.Text = "Home";
             this.buttonHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonHome.UseVisualStyleBackColor = true;
@@ -146,7 +146,7 @@
             this.button4.Location = new System.Drawing.Point(1032, 12);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(141, 45);
-            this.button4.TabIndex = 6;
+            this.button4.TabIndex = 10;
             this.button4.Text = "Logout ";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = true;
@@ -170,7 +170,7 @@
             this.button1.Location = new System.Drawing.Point(343, 353);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(196, 110);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Add";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
@@ -186,7 +186,7 @@
             this.button2.Location = new System.Drawing.Point(585, 353);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(196, 110);
-            this.button2.TabIndex = 2;
+            this.button2.TabIndex = 5;
             this.button2.Text = "Edit";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
@@ -198,7 +198,7 @@
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(438, 158);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 25);
+            this.label1.Size = new System.Drawing.Size(130, 32);
             this.label1.TabIndex = 8;
             this.label1.Text = "Particulars";
             // 
@@ -208,7 +208,7 @@
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(464, 213);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 25);
+            this.label2.Size = new System.Drawing.Size(98, 32);
             this.label2.TabIndex = 8;
             this.label2.Text = "Amount";
             // 
@@ -218,7 +218,7 @@
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(492, 268);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 25);
+            this.label3.Size = new System.Drawing.Size(65, 32);
             this.label3.TabIndex = 8;
             this.label3.Text = "Date";
             // 
@@ -226,25 +226,25 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.textBox1.Location = new System.Drawing.Point(585, 162);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 22);
-            this.textBox1.TabIndex = 9;
+            this.textBox1.Size = new System.Drawing.Size(258, 30);
+            this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.textBox2.Location = new System.Drawing.Point(585, 217);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 22);
-            this.textBox2.TabIndex = 9;
+            this.textBox2.Size = new System.Drawing.Size(258, 30);
+            this.textBox2.TabIndex = 2;
             // 
             // button3
             // 
@@ -256,7 +256,7 @@
             this.button3.Location = new System.Drawing.Point(843, 353);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(196, 110);
-            this.button3.TabIndex = 2;
+            this.button3.TabIndex = 6;
             this.button3.Text = "Delete";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
@@ -266,8 +266,8 @@
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(585, 270);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(258, 26);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dateTimePicker1.Size = new System.Drawing.Size(258, 30);
+            this.dateTimePicker1.TabIndex = 3;
             // 
             // errorProvider1
             // 
