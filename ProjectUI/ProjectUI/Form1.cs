@@ -46,7 +46,7 @@ namespace ProjectUI
             {
                 uid = d.Rows[0][0].ToString();
                 userid = int.Parse(uid);
-                MessageBox.Show("Login Successful");
+                
                 this.Hide();
                 index f = new index();
                 f.Show();
@@ -85,6 +85,11 @@ namespace ProjectUI
         private void textBox1_TabIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(linkLabel1.Text);
         }
     }
 }

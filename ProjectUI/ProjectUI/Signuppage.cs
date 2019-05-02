@@ -93,7 +93,7 @@ namespace ProjectUI
             {
                 MessageBox.Show("Entered Date of Birth should fall before " + today.Value.Date.ToString("dd-MM-yyyy"),"Date Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if(DOB.Value.Date < today.Value.Date && val)
+            if(DOB.Value.Date <= today.Value.Date && val)
             {
                 try
                 {
@@ -128,7 +128,7 @@ namespace ProjectUI
                 {
 
                     MessageBox.Show("Try Again");
-                    throw;
+                    
                 }
 
             }
@@ -157,11 +157,16 @@ namespace ProjectUI
             if (string.IsNullOrWhiteSpace(fname))
             {
                 ErrorMessage = "First Name should not be empty";
-                return false; 
+                return false;
             }
             else if (string.IsNullOrWhiteSpace(lname))
             {
                 ErrorMessage = "Last Name should not be empty";
+                return false;
+            }
+            else if (hasNumber.IsMatch(fname) || hasNumber.IsMatch(lname)) 
+            {
+                ErrorMessage = "Names should not contain any numeric value";
                 return false;
             }
             else if (string.IsNullOrWhiteSpace(username))
@@ -216,6 +221,11 @@ namespace ProjectUI
             {
                 return true;
             }
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -134,7 +134,7 @@ namespace ProjectUI
                     catch (Exception)
                     {
                         MessageBox.Show("Try Again");
-                        throw;
+                        
                     }
                 }
             }
@@ -216,7 +216,7 @@ namespace ProjectUI
                 catch (Exception)
                 {
                     MessageBox.Show("Try Again");
-                    throw;
+                    
                 }
             }
         }
@@ -297,7 +297,7 @@ namespace ProjectUI
                 catch (Exception)
                 {
                     MessageBox.Show("Try Again");
-                    throw;
+                    
                 }
             }
         }

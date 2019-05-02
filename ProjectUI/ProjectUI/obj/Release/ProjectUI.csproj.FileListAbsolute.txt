@@ -1,0 +1,16 @@
+D:\Daily Expense Manager\ProjectUI\ProjectUI\bin\Release\ProjectUI.exe.config
+D:\Daily Expense Manager\ProjectUI\ProjectUI\bin\Release\ProjectUI.exe
+D:\Daily Expense Manager\ProjectUI\ProjectUI\bin\Release\ProjectUI.pdb
+D:\Daily Expense Manager\ProjectUI\ProjectUI\bin\Release\Oracle.DataAccess.dll
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Release\ProjectUI.Expense.resources
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Release\ProjectUI.Financial_Report.resources
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Release\ProjectUI.Form1.resources
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Release\ProjectUI.Income.resources
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Release\ProjectUI.index.resources
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Release\ProjectUI.Properties.Resources.resources
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Release\ProjectUI.Signuppage.resources
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Release\ProjectUI.csproj.GenerateResource.cache
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Release\ProjectUI.csproj.CoreCompileInputs.cache
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Release\ProjectUI.csproj.CopyComplete
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Release\ProjectUI.exe
+D:\Daily Expense Manager\ProjectUI\ProjectUI\obj\Release\ProjectUI.pdb

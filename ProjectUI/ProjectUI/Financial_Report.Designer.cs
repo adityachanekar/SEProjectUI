@@ -151,7 +151,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(614, 41);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(599, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 34);
             this.label1.TabIndex = 11;
@@ -161,7 +162,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(363, 150);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label2.Location = new System.Drawing.Point(418, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 30);
             this.label2.TabIndex = 11;
@@ -171,7 +173,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(391, 196);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label3.Location = new System.Drawing.Point(446, 193);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 30);
             this.label3.TabIndex = 11;
@@ -179,14 +182,14 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(441, 150);
+            this.dateTimePicker1.Location = new System.Drawing.Point(496, 147);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(258, 30);
             this.dateTimePicker1.TabIndex = 1;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(441, 197);
+            this.dateTimePicker2.Location = new System.Drawing.Point(496, 194);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(258, 30);
             this.dateTimePicker2.TabIndex = 2;
@@ -198,7 +201,7 @@
             this.buttonFinRep.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFinRep.ForeColor = System.Drawing.Color.White;
             this.buttonFinRep.Image = ((System.Drawing.Image)(resources.GetObject("buttonFinRep.Image")));
-            this.buttonFinRep.Location = new System.Drawing.Point(718, 133);
+            this.buttonFinRep.Location = new System.Drawing.Point(773, 130);
             this.buttonFinRep.Name = "buttonFinRep";
             this.buttonFinRep.Size = new System.Drawing.Size(196, 110);
             this.buttonFinRep.TabIndex = 3;
@@ -221,11 +224,11 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(441, 270);
+            this.dataGridView1.Location = new System.Drawing.Point(423, 267);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(443, 299);
+            this.dataGridView1.Size = new System.Drawing.Size(546, 299);
             this.dataGridView1.TabIndex = 10;
             // 
             // Financial_Report
@@ -244,7 +247,7 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Financial_Report";

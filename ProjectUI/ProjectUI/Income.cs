@@ -22,9 +22,6 @@ namespace ProjectUI
             userid = Form1.userid;
             connectionString = Form1.connectionString;
 
-
-
-
         }
 
         private void Income_Load(object sender, EventArgs e)
@@ -69,10 +66,7 @@ namespace ProjectUI
             today.Value = DateTime.Today.Date;
             string ErrorMsg;
             var val = validation(textBox1.Text,textBox2.Text,out ErrorMsg);
-            
-
-            
-            
+          
             if (!val)
             {
                 MessageBox.Show(ErrorMsg, "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -141,7 +135,7 @@ namespace ProjectUI
                     catch (Exception)
                     {
                         MessageBox.Show("Try Again");
-                        throw;
+                        
                     }
                 }
             }

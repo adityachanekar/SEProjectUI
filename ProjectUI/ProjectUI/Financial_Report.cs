@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using System.Data.OracleClient;
+using System.IO;
 using Oracle.DataAccess.Client;
 
 
@@ -17,9 +17,11 @@ namespace ProjectUI
     {
         public int userid;
         public Financial_Report()
+        
         {
             InitializeComponent();
             userid = Form1.userid;
+            
             
         }
 
@@ -102,7 +104,7 @@ namespace ProjectUI
                     "SELECT EXPENSEDATE, EXPENSEPARTICULAR , NULL, EXPENSEAMOUNT \"Amount\" " +
                     "FROM EXPENSE WHERE USERID = " + userid + " " +
                     "AND EXPENSEDATE >= DATE'" + fromDate + "' AND EXPENSEDATE <= DATE'" + toDate + "'";
-                string sql2 = "SELECT INCOMEDATE \"Date\", INCOMEPARTICULAR \"Particulars\", INCOMEAMOUNT \"Credit\", null \"Debit\" FROM INCOME WHERE USERID = 1 AND INCOMEDATE >= DATE'2019-04-01' AND INCOMEDATE <= DATE'2019-04-27' UNION SELECT EXPENSEDATE, EXPENSEPARTICULAR , NULL, EXPENSEAMOUNT \"Amount\" FROM EXPENSE WHERE USERID = 1 AND EXPENSEDATE >= DATE'2019-04-01' AND EXPENSEDATE <= DATE'2019-04-27'";
+
                 try
                 {
                     con.Open();
@@ -118,6 +120,7 @@ namespace ProjectUI
                     else
                     {
                         dataGridView1.DataSource = dataTable;
+                        
                     }
                     con.Close();
                 }
@@ -132,5 +135,10 @@ namespace ProjectUI
                 
             }
         }
+
+        
+        
+        
     }
+    
 }
